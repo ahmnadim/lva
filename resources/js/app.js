@@ -10,15 +10,17 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-
 let routes = [
-	{ path:'/dashboard', component: require('./components/DashboardComponent.vue').default },
-	{ path:'/profile', component: require('./components/ProfileComponent.vue').default },
+	{path: '/dashboard', component: require('./components/DashboardComponent.vue').default},
+	{path: '/profile', component: require('./components/ProfileComponent.vue').default}
 ]
 
-var router = new VueRouter({
+const router = new VueRouter({
+	mode: 'history',
 	routes
 });
+
+
 
 /**
  * The following block of code may be used to automatically register your
