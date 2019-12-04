@@ -83,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
               <li class="nav-item has-treeview menu-open">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-cogs"></i>
+                  <i class="nav-icon fas fa-tools"></i>
                   <p>
                     Manage
                     <i class="right fas fa-angle-left"></i>
@@ -91,14 +91,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <router-link to="/users" class="nav-link">
                       <i class="fas fa-users"></i>
-                      <p>Manage Users</p>
-                    </a>
+                      <p>Users</p>
+                    </router-link>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link">
-                      <i class="fas fa-atom"></i>
+                      <i class="fas fa-cogs"></i>
                       <p>Developer</p>
                     </a>
                   </li>
