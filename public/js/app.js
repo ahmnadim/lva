@@ -2012,6 +2012,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37563,9 +37594,10 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row justify-content-center" }, [
         _c("div", { staticClass: "col-md-12 mt-5" }, [
-          _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card bg-dark" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v("\n                    User List\n                    "),
+              _c("i", { staticClass: "fas fa-list" }),
+              _vm._v(" User List\n                    "),
               _c(
                 "button",
                 {
@@ -37581,14 +37613,18 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _c("table", { staticClass: "table table-dark" }, [
+              _c("table", { staticClass: "table table-striped" }, [
                 _c("thead", [
                   _c("tr", [
                     _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
                     _vm._v(" "),
                     _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
                     _vm._v(" "),
-                    _c("th", { attrs: { scope: "col" } }, [_vm._v("E-mail")]),
+                    _c("th", { attrs: { scope: "col" } }, [_vm._v("Email")]),
+                    _vm._v(" "),
+                    _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")]),
+                    _vm._v(" "),
+                    _c("th", { attrs: { scope: "col" } }, [_vm._v("Status")]),
                     _vm._v(" "),
                     _c("th", { attrs: { scope: "col" } }, [_vm._v("Action")])
                   ])
@@ -37599,6 +37635,10 @@ var staticRenderFns = [
                     _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
                     _vm._v(" "),
                     _c("td", [_vm._v("Mark")]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("Otto")]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("Otto")]),
                     _vm._v(" "),
                     _c("td", [_vm._v("Otto")]),
                     _vm._v(" "),
@@ -37639,7 +37679,7 @@ var staticRenderFns = [
               attrs: { role: "document" }
             },
             [
-              _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "modal-content bg-dark" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c(
                     "h5",
@@ -37647,7 +37687,7 @@ var staticRenderFns = [
                       staticClass: "modal-title",
                       attrs: { id: "exampleModalCenterTitle" }
                     },
-                    [_vm._v("Modal title")]
+                    [_vm._v("Add New User")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -37669,7 +37709,87 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-body" }, [
-                  _vm._v("\n        ...\n      ")
+                  _c("form", [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "email",
+                          id: "name",
+                          placeholder: "Enter name"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "email" } }, [
+                        _vm._v("Email address")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "email",
+                          id: "email",
+                          placeholder: "Enter email"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "password" } }, [
+                        _vm._v("Password")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "password",
+                          id: "password",
+                          placeholder: "Password"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "user_type" } }, [
+                        _vm._v("User Type")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass: "form-control",
+                          attrs: { id: "user_type" }
+                        },
+                        [
+                          _c("option", [_vm._v("Admin")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("User")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Author")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group form-check" }, [
+                      _c("input", {
+                        staticClass: "form-check-input",
+                        attrs: { type: "checkbox", id: "exampleCheck1" }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-check-label",
+                          attrs: { for: "exampleCheck1" }
+                        },
+                        [_vm._v("Check me out")]
+                      )
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-footer" }, [
@@ -37679,7 +37799,7 @@ var staticRenderFns = [
                       staticClass: "btn btn-secondary",
                       attrs: { type: "button", "data-dismiss": "modal" }
                     },
-                    [_vm._v("Close")]
+                    [_vm._v("Cencel")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -37688,7 +37808,7 @@ var staticRenderFns = [
                       staticClass: "btn btn-primary",
                       attrs: { type: "button" }
                     },
-                    [_vm._v("Save changes")]
+                    [_vm._v("Add")]
                   )
                 ])
               ])
