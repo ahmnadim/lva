@@ -46,38 +46,48 @@
                 </button>
               </div>
               <div class="modal-body">
-                <form>
+                <form @submit.prevent="login" @keydown="form.onKeydown($event)" enctype="multipart/form-data">
                     <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="email" class="form-control" id="name" placeholder="Enter name">
-                    
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
-                    
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                      <label for="user_type">User Type</label>
-                      <select class="form-control" id="user_type">
-                        <option>Admin</option>
-                        <option>User</option>
-                        <option>Author</option>
-                      </select>
+                      <label for="name">Name</label>
+                      <input v-model="form.name" type="text" name="name" id="name" 
+                        class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
+                      <has-error :form="form" field="name"></has-error>
                     </div>
-                  <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
+                    <div class="form-group">
+                      <label for="email">E-mail</label>
+                      <input v-model="form.email" type="text" name="email" id="email" 
+                        class="form-control" :class="{ 'is-invalid': form.errors.has('email') }">
+                      <has-error :form="form" field="email"></has-error>
+                    </div>
+                    <div class="form-group">
+                      <label for="passowrd">Password</label>
+                      <input v-model="form.passowrd" type="text" name="passowrd" id="passowrd" 
+                        class="form-control" :class="{ 'is-invalid': form.errors.has('passowrd') }">
+                      <has-error :form="form" field="passowrd"></has-error>
+                    </div>
+                    <div class="form-group">
+                      <label for="type">Type</label>
+                      <select v-model="form.type" type="text" name="type" id="type" 
+                        class="form-control" :class="{ 'is-invalid': form.errors.has('type') }">
+                            <option disabled="">Select a role</option>
+                            <option>User</option>
+                            <option>Admin</option>
+                            <option>Author</option>
+                        </select>
+                      <has-error :form="form" field="type"></has-error>
+                    </div>
+                    <!-- <div class="form-group">
+                      <label>Image</label>
+                      <input v-model="form.image" type="file" name="image"
+                        class="form-control" :class="{ 'is-invalid': form.errors.has('image') }">
+                      <has-error :form="form" field="image"></has-error>
+                    </div> -->
+                 
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cencel</button>
-                <button type="button" class="btn btn-primary">Add</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cencel</button>
+                <button type="button" class="btn btn-success">Add</button>
               </div>
             </div>
           </div>
@@ -89,8 +99,17 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        data(){
+            return {
+                form: new Form({
+                    name: '',
+                    email: '',
+                    passowrd: '',
+                    type: ''
+
+
+                })
+            }
         }
     }
 </script>
